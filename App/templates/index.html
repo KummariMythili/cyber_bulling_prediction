@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyberbullying Detection</title>
+    <link rel="stylesheet" href="/static/main_css.css">
+</head>
+<body>
+    <h1>Cyberbullying Prediction</h1>
+    <form action="/predict" method="post">
+        <textarea name="message" placeholder="Type your message here..." required></textarea>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+    <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
